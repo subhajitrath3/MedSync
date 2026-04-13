@@ -1,0 +1,9 @@
+# Hugging Face Spaces Configuration
+title: MedSync - Medical Appointment Platform
+emoji: 🏥
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+license: mit
+app_port: 7860

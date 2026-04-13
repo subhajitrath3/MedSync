@@ -1,0 +1,38 @@
+{
+  "name": "medsync",
+  "version": "1.0.0",
+  "description": "MedSync - Medical Appointment Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" --names \"backend,frontend\" --prefix-colors \"blue,green\"",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:backend": "cd backend && npm install --production",
+    "build:frontend": "cd frontend && npm run build",
+    "build:all": "npm run build:backend && npm run build:frontend",
+    "start:backend": "cd backend && npm start",
+    "preview:frontend": "cd frontend && npm run preview",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "deploy:vercel": "cd frontend && vercel --prod",
+    "clean": "npm run clean:backend && npm run clean:frontend",
+    "clean:backend": "cd backend && rm -rf node_modules dist",
+    "clean:frontend": "cd frontend && rm -rf node_modules dist"
+  },
+  "keywords": [
+    "medical",
+    "healthcare",
+    "appointments",
+    "telemedicine"
+  ],
+  "author": "MedSync Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.0.2"
+  }
+}

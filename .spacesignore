@@ -1,0 +1,46 @@
+# Ignore node_modules
+node_modules/
+**/node_modules/
+
+# Ignore development files
+*.log
+*.env
+.env.local
+.env.development
+
+# Ignore build artifacts (will be built during deployment)
+frontend/dist/
+frontend/.vite/
+backend/uploads/
+
+# Ignore git
+.git/
+.gitignore
+
+# Ignore documentation (keep only README.md)
+DEPLOYMENT_*.md
+PROJECT_DOCUMENTATION.md
+BACKEND_SETUP_GUIDE.md
+
+# Ignore scripts not needed for HF
+build.bat
+deploy-check.bat
+verify.bat
+build.sh
+deploy-check.sh
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lock files (package-lock.json will be generated)
+package-lock.json
+**/package-lock.json
+bun.lockb
